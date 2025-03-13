@@ -1,0 +1,12 @@
+git init  # Initialize Git (only once per project)
+git commit -m "Two Solutions"  # Commit changes
+git remote add origin https://github.com/https:/Mythrean-S-R/leetcode-solutions.git  # Link to GitHub (only once)
+git push -u origin main  
+def twoSum(nums, target):
+    num_map = {}  # Dictionary to store numbers and their indices
+    for i, num in enumerate(nums):
+        complement = target - num
+        if complement in num_map:
+            return [num_map[complement], i]
+        num_map[num] = i
+    return []
