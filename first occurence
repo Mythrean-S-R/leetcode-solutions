@@ -1,0 +1,12 @@
+git init 
+git commit -m "First Occurence" 
+git branch -M main  # Rename branch to main (only once)
+git remote add origin https://github.com/Mythrean-S-R/leetcode-solutions.git  # Link to GitHub (only once)
+git push -u origin main  
+class Solution:
+    def strStr(self, haystack: str, needle: str) -> int:
+        if len(haystack)<len(needle):
+            return -1
+        for i in range(len(haystack)):
+            if (haystack[i:i+len(needle)]== needle):
+                return i 
